@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -24,13 +25,14 @@ public class Supplier implements Serializable {
     @Id
     @GeneratedValue
     UUID id;
-    
     @Column(nullable = false)
     String brand;
     
+    @NotNull(message = "O campo nome não pode ficar vazio.")
     @Column(nullable = false)
     String sellerName;
     
+    @NotNull(message = "O campo cnpj não pode ficar vazio.")
     @Column(nullable = false)
     String cnpj;
 

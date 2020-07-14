@@ -1,10 +1,12 @@
 br/com/apiloja/resources/ProductService.class
 br/com/apiloja/models/Product.class
-br/com/apiloja/JAXRSConfiguration.class
 br/com/apiloja/models/Supplier.class
+br/com/apiloja/resources/DeliveryService.class
 br/com/apiloja/resources/SupplierService.class
 br/com/apiloja/models/Client.class
 br/com/apiloja/resources/ClientService.class
-br/com/apiloja/models/Delivery.class
 br/com/apiloja/models/Order.class
-br/com/apiloja/resources/JavaEE8Resource.class
+br/com/apiloja/CorsFilter.class
+br/com/apiloja/resources/OrderService.class
+br/com/apiloja/JAXRSConfiguration.class
+br/com/apiloja/models/Delivery.class

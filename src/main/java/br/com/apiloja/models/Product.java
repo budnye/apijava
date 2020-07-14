@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -27,15 +28,19 @@ public class Product implements Serializable{
     @GeneratedValue
     UUID id;
     
+    @NotNull(message = "O campo nome não pode ficar vazio.")
     @Column(nullable = false)
     String name;
     
+    @NotNull(message = "O campo descrição não pode ficar vazio.")
     @Column(nullable = false)
     String description;
     
+    @NotNull(message = "O campo preço não pode ficar vazio.")
     @Column(nullable = false)
     Double price;
     
+    @NotNull(message = "O campo fornecedor não pode ficar vazio.")
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "supplier_id")
     Supplier supplier;

@@ -20,6 +20,7 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -33,9 +34,11 @@ public class Order implements Serializable {
     @GeneratedValue
     UUID id;
     
+    @NotNull(message = "O campo título não pode ficar vazio.")
     @Column(nullable = false)    
     String title;
     
+    @NotNull(message = "O campo fornecedor não pode ficar vazio.")
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "supplier_id")
     Supplier supplier;

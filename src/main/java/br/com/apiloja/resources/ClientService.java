@@ -21,6 +21,7 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.Response.Status;
 
 /**
  *
@@ -43,6 +44,9 @@ public class ClientService {
     @POST
     public Response addClient(Client client){
         entityManager.persist(client);
+        if(client.getCpf().length() > 11) {
+            return Response.status(Status.BAD_REQUEST).entity("CPF inválido").build();
+        }
         return Response.status(Response.Status.CREATED).entity(client).build();
     }
     

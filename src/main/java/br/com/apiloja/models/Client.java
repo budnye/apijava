@@ -15,6 +15,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 
 /**
  *
@@ -27,9 +28,11 @@ public class Client implements Serializable {
     @GeneratedValue
     private UUID id;
     
+    @NotNull(message = "O campo nome não pode ficar vazio.")
     @Column(nullable = false)
     private String name;
     
+    @NotNull(message = "O campo cpf não pode ficar vazio.")
     @Column(nullable = false)
     private String cpf;
     

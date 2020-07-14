@@ -1,9 +1,11 @@
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/models/Product.java
+/Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/resources/DeliveryService.java
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/models/Supplier.java
-/Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/resources/JavaEE8Resource.java
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/resources/ClientService.java
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/JAXRSConfiguration.java
+/Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/CorsFilter.java
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/models/Client.java
+/Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/resources/OrderService.java
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/resources/ProductService.java
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/models/Order.java
 /Users/budny/NetBeansProjects/api-loja/src/main/java/br/com/apiloja/resources/SupplierService.java
