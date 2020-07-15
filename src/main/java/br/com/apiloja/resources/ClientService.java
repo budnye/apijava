@@ -43,10 +43,10 @@ public class ClientService {
     
     @POST
     public Response addClient(Client client){
-        entityManager.persist(client);
         if(client.getCpf().length() > 11) {
             return Response.status(Status.BAD_REQUEST).entity("CPF inválido").build();
         }
+        entityManager.persist(client);
         return Response.status(Response.Status.CREATED).entity(client).build();
     }
     

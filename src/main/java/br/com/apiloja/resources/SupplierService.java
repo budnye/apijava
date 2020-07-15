@@ -42,6 +42,9 @@ public class SupplierService {
     
     @POST
     public Response addSupplier(Supplier supplier){
+        if (supplier.getCnpj().length() > 14) {
+            return Response.status(Response.Status.BAD_REQUEST).entity("CPF inválido").build();
+        }
         entityManager.persist(supplier);
         return Response.status(Response.Status.CREATED).entity(supplier).build();
     }

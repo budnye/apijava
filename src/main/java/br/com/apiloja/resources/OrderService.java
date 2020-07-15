@@ -38,7 +38,7 @@ public class OrderService {
     
     @GET
     public List<Order> getOrder(){
-       return entityManager.createQuery("SELECT d FROM Order d", Order.class).getResultList();
+       return entityManager.createQuery("SELECT o FROM Order o", Order.class).getResultList();
     }
     
     @POST
